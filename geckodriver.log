@@ -1,0 +1,26 @@
+1655846010964	geckodriver	INFO	Listening on 127.0.0.1:59447
+1655846011888	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "54377" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilelwvnkH"
+1655846285937	geckodriver	INFO	Listening on 127.0.0.1:34857
+1655846286529	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "40207" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileRkdyvm"
+*** You are running in headless mode.
+1655846302142	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:40207
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileRkdyvm/search.json.mozlz4", (void 0)))
+Missing chrome or resource URL: resource://gre/modules/UpdateListener.jsm
+1655846311557	Marionette	INFO	Listening on port 42639
+Read port: 42639
+1655846311908	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://localhost:40207/devtools/browser/bc93df5b-8423-43e6-999e-b63212590ac2
+JavaScript warning: https://evitingawabi.com/r7WxlYRcaG7NNi0K2/51220, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://evitingawabi.com/r7WxlYRcaG7NNi0K2/51220, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1655846464047	geckodriver	INFO	Listening on 127.0.0.1:43977
+1655846464102	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--remote-debugging-port" "50463" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileHutdrf"
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1655846475133	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:50463
+ATTENTION: default value of option mesa_glthread overridden by environment.
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 767))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileHutdrf/search.json.mozlz4", (void 0)))

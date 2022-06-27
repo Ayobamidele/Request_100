@@ -1,0 +1,14 @@
+https://www.stagatv.com/?s=ip
+import urllib.parse
+safe_string = urllib.parse.quote_plus(
+        for i,content in enumerate(response.css('div.dl-item a.linkselector::attr(href)')):
+                'content1':[x.get() for x in product_url],
+
+
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium import webdriver
+
+options = FirefoxOptions()
+options.add_argument("--headless")
+driver = webdriver.Firefox(options=options)
+driver.get("https://pythonbasics.org")
