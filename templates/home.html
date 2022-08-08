@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="w3-container w3-display-middle ">
+    <h1>Request <sup>100</sup></h1>
+		<div class="w3-panel w3-card" >
+			<form id="input-form" method="post" action="/">
+				<input type="text" name="url" style="width: 300px;" placeholder="Amazon Product URL"/><br><br>
+				<input id="submitbutton" type="submit" name="submitbutton" value="Analyze Reviews"/>
+			</form>
+		</div>	
+{% endblock content %}

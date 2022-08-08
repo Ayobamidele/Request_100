@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='main.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap-grid.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap-grid.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap-reboot.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap-reboot.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.min.css')}}">
+    <title>Request 100</title>
+  </head>
+  <body>
+    <div class="bgimg-1">
+      <div class="caption" style="top: 30%;">
+        <h1 style="color: #1e1e1e;font-size: xxx-large;">Request <sup style="color: red;">100</sup></h1>
+      </div>
+      <div class="caption">
+        <form id="input-form" class="custom-field" method="post" action="/">
+          <input type="text" name="searchText" style="width: 60%;" placeholder="Search movie"/>
+          <input class=" w-auto btn-dark bg-dark" id="submitbutton" type="submit" name="submitbutton" value="Search"/>
+        </form>
+      </div>
+    </div>
+    <p class="text-center" style="padding:5px 15px">Request<sup style="color: red;">100</sup><sub style="color: red;"></sub> </p>
+  </body>
+</html>
