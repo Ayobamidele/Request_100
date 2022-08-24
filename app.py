@@ -20,9 +20,11 @@ output_data = []
 crawl_runner = CrawlerRunner()
 
 def get_results():
-    with open('test.json', encoding='utf-8') as data_file:
-        data = data_file.read()
-    data = json.loads(re.sub(r'("(?:\\?.)*?")|,\s*([]}])', r'\1\2', data))
+    results = ['staga']
+    data = []
+    for result in results: 
+        with open(f'{result}.json', encoding='utf-8') as data_file:
+            data += json.loads(re.sub(r'("(?:\\?.)*?")|,\s*([]}])', r'\1\2', data_file.read()))
     return data
 
 # By Deafult Flask will come into this when we run the file
@@ -59,6 +61,8 @@ def scrape():
     print(os.getcwd())
     spider_name = "staga"
     print(subprocess.check_output(['scrapy', 'crawl', spider_name, "-a", f"search_text={baseURL}"]))
+    # spider_name = "net9"
+    # print(subprocess.check_output(['scrapy', 'crawl', spider_name, "-a", f"search_text={baseURL}"]))
     # # os.system(f'scrapy crawl staga -o test.json -a search_text={baseURL}')
     # time.sleep(10) # Pause the function while the scrapy spider is running
     # # json_url = os.path.join(os.getcwd(), "test.json")
@@ -68,4 +72,4 @@ def scrape():
     return redirect(url_for('result'))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)

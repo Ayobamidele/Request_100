@@ -11,7 +11,7 @@ from itemadapter import ItemAdapter
 
 class JsonWriterPipeline(object):
     def open_spider(self, spider):
-        self.file = open('test.json', 'w')
+        self.file = open(f'{spider.name}.json', 'w')
         # Your scraped items will be saved in the file 'scraped_items.json'.
         # You can change the filename to whatever you want.
         self.file.write("[")

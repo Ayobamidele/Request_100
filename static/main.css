@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'Yellowtail', cursive;
-    src: url('/font/Yellowtail-regular.ttf');
+	font-family: 'Yellowtail', cursive;
+	src: url('/static/fonts/Yellowtail/Yellowtail.ttf');
+}
+@font-face {
+	font-family: Jacksilver;
+	src: url("/static/fonts/jacksilver/Jacksilver.ttf")"),
 }
 *, *::before, *::after {
     box-sizing: border-box;
-}
-@font-face {
-  font-family: 'Jacksilver';
-  src: url('/font/Jacksilver.woff');
 }
 body{
 	background: #fafafa;

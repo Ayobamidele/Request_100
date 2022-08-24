@@ -1,20 +1,23 @@
 {% extends "layout.html" %}
 {% block content %}
 	<h1>Search Result for - </h1>
-	<div id="movie-content " class="row d-flex ">
-		{% for movie in data %}
-			<div class="movie-card column">
-				<img class="img-fluid movie-img card-img-top" src={{ movie.Image }} onError="this.onerror=null;this.src='https://i.ebayimg.com/images/g/1EMAAMXQdGJR2-n3/s-l1600.jpg';" alt="Sorry, something went wrong"/>
-				<div class="movie-description justify-content-between align-items-center shadow card-body">
-					<h3 class="movie-title small">{{ movie.Title }}</h3>
-					<div class=" w-auto d-flex px-2 pb-2 movie-actions">
-						<a href={{ movie.download_link }}><span data-toggle="tooltip" data-placement="top" title="Download Media" class="icon icon-download "></span></a>
-						<a href={{ movie.subtitle_download_link }}><span data-toggle="tooltip" data-placement="top" title="Download Subtitle" class="icon icon-subtitles"></span></a>
-						<a href={{ movie.Trailer }}><span data-toggle="tooltip" data-placement="top" title="Trailer" class="icon icon-youtube-play"></span></a>
-					</div>
-				</div>
+	<div id="movie-content " class="mb-5 sdiv mb-lg-auto overflow-hidden">
+		<div class="wrapper mb-5">
+			{% for movie in data %}
+			<div class="panel" >
+				<img class="product-img" src={{ movie.Image }} onError="this.onerror=null;this.src='https://i.ebayimg.com/images/g/1EMAAMXQdGJR2-n3/s-l1600.jpg';" alt="Sorry, something went wrong">
+				
+					<h3 class="movie-title text-truncate w-100 mb-0" data-toggle="tooltip" data-placement="bottom" title="{{ movie.Title }}">{{ movie.Title }}</h3>
+
+					<a class=" text-decoration-none" href={{ movie.download_link }}><span data-toggle="tooltip" data-placement="top" title="Download Media" class="icon icon-download "></span></a>
+					{% if movie.subtitle_download_link %}
+						<a class=" text-decoration-none" href={{ movie.subtitle_download_link }}><span data-toggle="tooltip" data-placement="top" title="Download Subtitle" class="icon icon-subtitles"></span></a>
+					{% endif %}
+					<a class=" text-decoration-none" href={{ movie.Trailer }}><span data-toggle="tooltip" data-placement="top" title="Trailer" class="icon icon-youtube-play"></span></a>
+					<i class=" type my-lg-auto my-xl-auto text-capitalize text-white">{{ movie.Type }}</i>
 			</div>
-		{% endfor %}
+			{% endfor %}
+		</div>
 	</div>
-	
+
 {% endblock content %}
