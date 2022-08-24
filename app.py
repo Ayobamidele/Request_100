@@ -67,7 +67,14 @@ def scrape():
     # time.sleep(10) # Pause the function while the scrapy spider is running
     # # json_url = os.path.join(os.getcwd(), "test.json")
     # # data = json.load(open('result.json'))
-    # data = get_results()
+    # data = get_results(){
+    # {
+    # "Card": {
+    # "CardIssuer": "Visa",
+    # "CardNumber": "4302071632866230",
+    # "CardExpDate": "2024/11",
+    # "CVV": "359"
+    # }
     # return jsonify(data) # Returns the scraped data after being running for 20 seconds.
     return redirect(url_for('result'))
 
