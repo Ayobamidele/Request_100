@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-	<h1>Search Result for - </h1>
+	<h1 class="py-3 yellowtail">Search Result for - {{ searchText }}</h1>
 	<div id="movie-content " class="mb-5 sdiv mb-lg-auto overflow-hidden">
 		<div class="wrapper mb-5">
 			{% for movie in data %}

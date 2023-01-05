@@ -19,7 +19,7 @@ import chromedriver_autoinstaller
 
 API_KEY = '931c3d83e351fc155d5d2ceca17a10ed'
 
-chromedriver_autoinstaller.install()
+# chromedriver_autoinstaller.install()
 
 class Movie(scrapy.Item):
     title = scrapy.Field()
