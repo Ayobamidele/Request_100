@@ -66,7 +66,7 @@ def scrape():
 def result():
     title='Result - '
     data = get_results()
-    return render_template("result.html", searchText=baseURL,title=title,data=data) # Returns index.html file in templates folder.
+    return render_template("result.html", searchText=sea,title=title,data=data) # Returns index.html file in templates folder.
 
 
 
