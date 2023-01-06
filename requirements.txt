@@ -14,7 +14,6 @@ crochet==2.0.0
 cryptography==37.0.2
 cssselect==1.1.0
 decorator==5.1.1
-docker==5.0.3
 dryscrape==1.0
 emoji==1.7.0
 entrypoints==0.4
