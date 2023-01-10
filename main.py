@@ -37,7 +37,7 @@ def index():
 
 @app.route('/about', methods=['GET',])
 def about():
-    with open('result.json', encoding='utf-8') as data_file:
+    with open('staga.json', encoding='utf-8') as data_file:
         data = json.loads(re.sub(r'("(?:\\?.)*?")|,\s*([]}])', r'\1\2', data_file.read()))
     return jsonify(data)
 #    return render_template("about.html") # Returns index.html file in templates folder.
