@@ -135,7 +135,7 @@ class StagaSpider(scrapy.Spider):
             url, data={'token': token, 'api': "1", 'dataType': "JSON"},)
         try:
             download_link = download_request.json()
-            data['download_link'] = download_link['file']
+            data['download_link'] ="https://stagatvfiles.com" + download_link['file']
         except Exception as e:
             path = "NUL"
             options = Options()
@@ -160,7 +160,7 @@ class StagaSpider(scrapy.Spider):
                 (By.XPATH, '//*[@id="om_result"]/div/div/a')))
             ele2.get_attribute("href")
 
-            data['download_link'] = ele2.get_attribute("href")
+            data['download_link'] = "https://stagatvfiles.com" + ele2.get_attribute("href")
             for file in glob.glob(os.getcwd() + "/NUL/*"):
                 print('Deleting file:', file)
                 os.remove(file)
@@ -180,7 +180,7 @@ class StagaSpider(scrapy.Spider):
             url, data={'token': token, 'api': "1", 'dataType': "JSON"},)
         try:
             download_link = download_request.json()
-            data['subtitle_download_link'] = download_link['file']
+            data['subtitle_download_link'] = "https://stagatvfiles.com" + download_link['file']
         except Exception as e:
             path = "NUL"
             options = Options()
@@ -205,7 +205,7 @@ class StagaSpider(scrapy.Spider):
                 (By.XPATH, '//*[@id="om_result"]/div/div/a')))
             ele2.get_attribute("href")
 
-            data['subtitle_download_link'] = ele2.get_attribute("href")
+            data['subtitle_download_link'] = "https://stagatvfiles.com" + ele2.get_attribute("href")
             for file in glob.glob(os.getcwd() + "/NUL/*"):
                 print('Deleting file:', file)
                 os.remove(file)
