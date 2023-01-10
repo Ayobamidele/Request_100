@@ -5,11 +5,11 @@
 		<div class="wrapper mb-5">
 			{% for movie in data %}
 			<div class="panel" >
-				<img class="product-img" src={{"https://stagatvfiles.com/" movie.Image }} onError="this.onerror=null;this.src='https://i.ebayimg.com/images/g/1EMAAMXQdGJR2-n3/s-l1600.jpg';" alt="Sorry, something went wrong">
+				<img class="product-img" src={{ movie.Image }} onError="this.onerror=null;this.src='https://i.ebayimg.com/images/g/1EMAAMXQdGJR2-n3/s-l1600.jpg';" alt="Sorry, something went wrong">
 				
 					<h3 class="movie-title text-truncate w-100 mb-0" data-toggle="tooltip" data-placement="bottom" title="{{ movie.Title }}">{{ movie.Title }}</h3>
 
-					<a class=" text-decoration-none" href={{ "https://stagatvfiles.com/" movie.download_link }}><span data-toggle="tooltip" data-placement="top" title="Download Media" class="icon icon-download "></span></a>
+					<a class=" text-decoration-none" href="https://stagatvfiles.com/"{{ movie.download_link }}><span data-toggle="tooltip" data-placement="top" title="Download Media" class="icon icon-download "></span></a>
 					{% if movie.subtitle_download_link %}
 						<a class=" text-decoration-none" href={{ movie.subtitle_download_link }}><span data-toggle="tooltip" data-placement="top" title="Download Subtitle" class="icon icon-subtitles"></span></a>
 					{% endif %}
