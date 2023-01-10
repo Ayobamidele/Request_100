@@ -37,7 +37,10 @@ def index():
 
 @app.route('/about', methods=['GET',])
 def about():
-    return render_template("about.html") # Returns index.html file in templates folder.
+    with open('result.json', encoding='utf-8') as data_file:
+        data = json.loads(re.sub(r'("(?:\\?.)*?")|,\s*([]}])', r'\1\2', data_file.read()))
+    return jsonify(data)
+#    return render_template("about.html") # Returns index.html file in templates folder.
 
 # After clicking the Submit Button FLASK will come into this
 @app.route('/', methods=['POST'])
